@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reto 2 - Entrega de Medicamentos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h1>Reto: Entrega de Medicamentos a Pacientes </h1>
+    
+    <div class="grid">
+      <div>
+        <label for="stock1">Existencias Medicamento 1</label>
+        <input id="stock1" type="number" min="0" value="0">
+      </div>
+      <div>
+        <label for="stock2">Existencias Medicamento 2</label>
+        <input id="stock2" type="number" min="0" value="0">
+      </div>
+    </div>
+
+    <div class="row">
+      <button id="startBtn">Inicializar Sistema</button>
+      <button id="resetBtn" class="secondary">Reiniciar</button>
+    </div>
+
+    <section class="patients">
+      <h2>Agregar paciente</h2>
+
+      <div class="grid">
+        <div>
+          <label for="sistol">Presión Sistólica</label>
+          <input id="sistol" type="number">
+        </div>
+        <div>
+          <label for="diastol">Presión Diastólica</label>
+          <input id="diastol" type="number">
+        </div>
+      </div>
+
+      <div class="row">
+        <button id="addPatient">Agregar paciente</button>
+        <button id="finish" class="secondary">Finalizar</button>
+      </div>
+
+      <div id="messages"></div>
+
+      <table id="patientsTable" style="display:none">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Sistólica</th>
+            <th>Diastólica</th>
+            <th>Categoría</th>
+            <th>Medicamento</th>
+            <th>Dosis</th>
+            <th>Stock1</th>
+            <th>Stock2</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <div class="stats" id="summary" style="display:none">
+        <div class="stat">
+          <div>Total pacientes</div>
+          <strong id="total">0</strong>
+        </div>
+        <div class="stat">
+          <div>Con Medicamento 1</div>
+          <strong id="m1count">0</strong>
+          <span id="m1pct">0.00%</span>
+        </div>
+        <div class="stat">
+          <div>Con Medicamento 2</div>
+          <strong id="m2count">0</strong>
+          <span id="m2pct">0.00%</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
